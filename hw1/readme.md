@@ -1,3 +1,8 @@
+//Dai Huynh
+//CSCI 3800
+//Assignment 1
+
+
 Alt-Svc →quic=":443"; ma=2592000; v="35,34"
 
 Meaning: Custom header
