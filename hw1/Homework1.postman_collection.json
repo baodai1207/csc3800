@@ -1,0 +1,55 @@
+{
+	"id": "7f846f10-b817-a1c9-b54c-ebc72e4098cd",
+	"name": "Homework1",
+	"description": "",
+	"order": [
+		"559f12db-7a4f-9ec1-2348-3c786d63b86f",
+		"1b0470fc-bcda-e4e5-68d3-4d0b3469a682"
+	],
+	"folders": [],
+	"timestamp": 1486257769976,
+	"owner": "1497792",
+	"public": false,
+	"requests": [
+		{
+			"id": "1b0470fc-bcda-e4e5-68d3-4d0b3469a682",
+			"headers": "",
+			"url": "https://www.googleapis.com/books/v1/volumes/{{id}}",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "7f846f10-b817-a1c9-b54c-ebc72e4098cd",
+			"data": null,
+			"dataMode": "params",
+			"name": "https://www.googleapis.com/books/v1/volumes/{{id}}",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1486257858071,
+			"version": 2,
+			"responses": [],
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar jsonobj= JSON.parse(responseBody);\n\nvar bookID = jsonobj.id;\n\ntests[\"Valid ID\"] = bookID.has(\"HyMcH_9eTtoC\");",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "559f12db-7a4f-9ec1-2348-3c786d63b86f",
+			"headers": "",
+			"url": "https://www.googleapis.com/books/v1/volumes?q={{book_title}}",
+			"pathVariables": {},
+			"preRequestScript": "postman.setEnvironmentVariable(\"book_title\", \"Turing\");",
+			"method": "GET",
+			"collectionId": "7f846f10-b817-a1c9-b54c-ebc72e4098cd",
+			"data": null,
+			"dataMode": "params",
+			"name": "https://www.googleapis.com/books/v1/volumes?q={{book_title}}",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1486257817943,
+			"version": 2,
+			"responses": [],
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar obj = JSON.parse(responseBody);\n\nfor (var i in obj.items)\n{\n    var bookTitle = obj.items[i];\n    tests [\"Turing in title\"] = bookTitle.volumeInfo.title.has(\"Turing\");\n}\n\npostman.setEnvironmentVariable(\"id\", obj.items[0].id);\n",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
