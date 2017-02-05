@@ -1,0 +1,34 @@
+{
+	"id": "29965bb4-488e-09b5-ba2f-4a53ff24e0f4",
+	"name": "HW1",
+	"description": "",
+	"order": [
+		"882160ba-0e80-be90-1eff-d83343d8be5a"
+	],
+	"folders": [],
+	"timestamp": 1486251366944,
+	"owner": "1497792",
+	"public": false,
+	"requests": [
+		{
+			"id": "882160ba-0e80-be90-1eff-d83343d8be5a",
+			"headers": "",
+			"url": "https://www.googleapis.com/books/v1/volumes?q={{book_title}}",
+			"pathVariables": {},
+			"preRequestScript": "postman.setEnvironmentVariable(\"book_title\", \"Turing\");",
+			"method": "GET",
+			"collectionId": "29965bb4-488e-09b5-ba2f-4a53ff24e0f4",
+			"data": null,
+			"dataMode": "params",
+			"name": "https://www.googleapis.com/books/v1/volumes?q={{book_title}}",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1486251366944,
+			"version": 2,
+			"responses": [],
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar obj = JSON.parse(responseBody);\n\nfor (var i in obj.items)\n{\n    var bookTitle = obj.items[i];\n    tests [\"Turing in title\"] = bookTitle.volumeInfo.title.has(\"Turing\");\n}\n\n\npostman.setEnvironmentVariable(\"id\", obj.items[0].id);\n",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
