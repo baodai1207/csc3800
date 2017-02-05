@@ -4,6 +4,7 @@
 
 //Assignment 1
 
+//Header request, response and meaning
 
 Alt-Svc →quic=":443"; ma=2592000; v="35,34"
 
