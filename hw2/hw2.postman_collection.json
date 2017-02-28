@@ -1,0 +1,284 @@
+{
+	"id": "1a585d67-989f-cc31-9909-c6c93897524c",
+	"name": "hw2",
+	"description": "4 request get, post, put, delete",
+	"order": [
+		"58b61a6c-a622-6055-8c27-8bc015419107",
+		"0761aabd-6529-c765-d503-4abae17b2d78",
+		"9ea25908-5398-034c-7cf7-019a6005b940",
+		"d4cc09d7-4d65-2129-7c1f-7c73bc39cc1d",
+		"bb85fad4-0f0c-4651-efb8-23b47debf0e9"
+	],
+	"folders": [],
+	"timestamp": 1488178538949,
+	"owner": "1497792",
+	"public": false,
+	"requests": [
+		{
+			"id": "0761aabd-6529-c765-d503-4abae17b2d78",
+			"headers": "",
+			"url": "http://daih1207-test.apigee.net/homework2/house/1207",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "1a585d67-989f-cc31-9909-c6c93897524c",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://daih1207-test.apigee.net/homework2/house/1207",
+			"description": "calling GET function to get a house",
+			"descriptionFormat": "html",
+			"time": 1488260610481,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.",
+						"fromServer": true
+					},
+					"time": 109,
+					"headers": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "54",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 28 Feb 2017 05:43:08 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "\"You get a house successful, Here your house ID: 1207\"",
+					"language": "json",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"responseSize": {
+						"body": 54,
+						"header": 187
+					},
+					"mimeType": "text",
+					"fileName": "response.json",
+					"dataURI": "data:application/json;base64, IllvdSBnZXQgYSBob3VzZSBzdWNjZXNzZnVsLCBIZXJlIHlvdXIgaG91c2UgSUQ6IDEyMDci",
+					"state": {
+						"size": "normal"
+					},
+					"id": "4ab1c661-eaa6-53c6-1f0a-9b4926585fc5",
+					"name": "getahouse",
+					"request": {
+						"url": "http://daih1207-test.apigee.net/homework2/house/1207",
+						"headers": [],
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			],
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "58b61a6c-a622-6055-8c27-8bc015419107",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://daih1207-test.apigee.net/homework2/house/",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "1a585d67-989f-cc31-9909-c6c93897524c",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://daih1207-test.apigee.net/homework2/house",
+			"description": "calling GET function to get all houses in list",
+			"descriptionFormat": "html",
+			"time": 1488260544063,
+			"version": 2,
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.",
+						"fromServer": true
+					},
+					"time": 78,
+					"headers": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "55",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 28 Feb 2017 05:42:18 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "\"calling GET function although we do not have database\"",
+					"language": "json",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"responseSize": {
+						"body": 55,
+						"header": 187
+					},
+					"mimeType": "text",
+					"fileName": "response.json",
+					"dataURI": "data:application/json;base64, ImNhbGxpbmcgR0VUIGZ1bmN0aW9uIGFsdGhvdWdoIHdlIGRvIG5vdCBoYXZlIGRhdGFiYXNlIg==",
+					"state": {
+						"size": "normal"
+					},
+					"id": "bc9b0b74-411c-5fe6-cd13-83577201b988",
+					"name": "getlisthouse",
+					"request": {
+						"url": "http://daih1207-test.apigee.net/homework2/house/",
+						"headers": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"data": "{\"model\": \"Condo\",\n\t\"year\": 2014\n}",
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			],
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\"model\": \"Condo\",\n\t\"year\": 2014\n}"
+		},
+		{
+			"id": "9ea25908-5398-034c-7cf7-019a6005b940",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://daih1207-test.apigee.net/homework2/house/1207",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "1a585d67-989f-cc31-9909-c6c93897524c",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://daih1207-test.apigee.net/homework2/house/1207",
+			"description": "Calling POST function to add a house ",
+			"descriptionFormat": "html",
+			"time": 1488261619414,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\"model\": \"Condo\",\n\t\"year\": 2014\n}"
+		},
+		{
+			"id": "bb85fad4-0f0c-4651-efb8-23b47debf0e9",
+			"headers": "",
+			"url": "http://daih1207-test.apigee.net/homework2/house/1207",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "1a585d67-989f-cc31-9909-c6c93897524c",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://daih1207-test.apigee.net/homework2/house/1207",
+			"description": "Calling DELETE function to delete a house",
+			"descriptionFormat": "html",
+			"time": 1488261867446,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "d4cc09d7-4d65-2129-7c1f-7c73bc39cc1d",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://daih1207-test.apigee.net/homework2/house/1207",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "1a585d67-989f-cc31-9909-c6c93897524c",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://daih1207-test.apigee.net/homework2/house/1207",
+			"description": "Calling PUT function to updated a house",
+			"descriptionFormat": "html",
+			"time": 1488261809764,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\"model\": \"Studio\",\n\t\"year\": 2010}"
+		}
+	]
+}
