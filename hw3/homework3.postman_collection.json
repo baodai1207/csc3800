@@ -1,0 +1,47 @@
+{
+	"id": "9fdef10e-1104-0ba0-633e-da1b1bc15fbb",
+	"name": "homework3",
+	"description": "",
+	"order": [
+		"357419f9-358a-3895-3ea9-a34fbba74056"
+	],
+	"folders": [],
+	"timestamp": 1489462334250,
+	"owner": "1497792",
+	"public": false,
+	"requests": [
+		{
+			"id": "357419f9-358a-3895-3ea9-a34fbba74056",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "https://daih1207-test.apigee.net/oauth/client_credential/accesstoken?grant_type=client_credentials  ",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "9fdef10e-1104-0ba0-633e-da1b1bc15fbb",
+			"data": [
+				{
+					"key": "client_id",
+					"value": "43ujwdSF1X8vGdObasXnVmEsJ8AxD3S7",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_secret",
+					"value": "RRs88OGe4sxsDUnF",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "https://daih1207-test.apigee.net/oauth/client_credential/accesstoken?grant_type=client_credentials  ",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1489462380721,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
