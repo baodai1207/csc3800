@@ -1,7 +1,6 @@
 /* Created by Dai Huynh */
 'use strict';
 
-// Exports all the functions to perform on the db
 module.exports = {
     getAll : getAll,
     addIt : addIt,
@@ -29,12 +28,12 @@ var usergrid = new usergridClient({
 /*GET*/
 function getAll(req, res, next) {
     usergrid.GET('movies', function(error, usergridResponse, entities) {
-        // if (usergridResponse.ok){
-        res.json(usergridResponse.entities)
-        // }
-        // else{
-        //     res.status(404).json("The list is unavailable");
-        // }
+        if (usergridResponse.ok){
+            res.status(200).json(usergridResponse.entities)
+        }
+        else{
+             res.status(404).json("The list is unavailable");
+            }
     })
 }
 /*GET*/
@@ -42,13 +41,13 @@ function getIt (req, res, next){
     var name = req.swagger.params.title.value;
 
     usergrid.GET('movies', name, function(error, usergridResponse, entity) {
-        //
-        // if (usergridResponse.ok){
+        
+         if (usergridResponse.ok){
              res.json(usergridResponse.entities);
-        // }
-        // else{
-//             res.status(404).json("Movie title is unavailable");
-//         }
+            }
+         else{
+             res.status(404).json("Movie title is unavailable");
+         }
     })
 }
 
