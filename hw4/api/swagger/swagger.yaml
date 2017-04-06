@@ -55,7 +55,7 @@ paths:
     x-swagger-router-controller: hello_world
     get:
       operationId : getIt
-      description: get a movie
+      description: get a movie in the list
       parameters:
         - name: title
           type: string
@@ -72,7 +72,7 @@ paths:
             $ref: "#/definitions/ErrorResponse"
     put:
       operationId : updateIt
-      description: update a movie
+      description: update a movie in the list
       parameters:
         - name: title
           description: Movie title
@@ -96,7 +96,7 @@ paths:
             $ref: "#/definitions/ErrorResponse"
     delete:
       operationId : deleteIt
-      description: delete a movie
+      description: delete a movie in the list
       parameters:
         - name: title
           description: Movie title
