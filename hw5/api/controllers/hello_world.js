@@ -112,53 +112,6 @@ function addIt(req, res, next) {
 }
 
 /*POST REVIEW */
-/*
-function addReview (req,res, next){
-    var title = req.swagger.params.title.value;
-    var review = req.swagger.params.review.value;
-    _.assign(review, {type: 'review'});
-    usergrid.GET("movies", title, function(error, usergridResponse, entities) {
-        if (!error)
-        {
-            var name = entities.name;
-            _.assign(review, {movie: name});
-            
-            if (review['title'].length < 1)
-                res.json("movie is undefined");
-            else if(review['rate'].length < 1)
-                res.json("review rate is undefined");
-            else if(review['quote'].length < 1)
-                res.json("review is undefined");
-            else usergrid.POST(review, function (err, response, review) 
-            {
-                    if (err) 
-                    {
-                        res.json({message: err});
-                    }
-                    else 
-                    {
-                        review.save(usergrid, function (err) 
-                        {
-
-                            if (err) 
-                            {
-                                res.status(500).json(err).end();
-                            }
-                            else res.json({
-                                message: 'Review added!',
-                                review: review
-                            }).end();
-                        });
-                    }
-                })
-                
-        }
-
-        else
-            res.json("Movie does not exist! review cannot be added.");
-    });
-}
-*/
 
 function addReview (req,res){
     var review = req.swagger.params.review.value;
@@ -169,11 +122,11 @@ function addReview (req,res){
             //give movie name to review, only if movie exists already
             _.assign(review, {movie: movietitle});
             if(_.isUndefined(review.movie))
-                res.json({ Error: "movie undefined."});
+                res.json({ Error: "Movie in unavailable."});
             else if(_.isUndefined(review.rate))
-                res.json({ Error: "movie rate undefined." });
+                res.json({ Error: "Movie rate is unavailable " });
             else if(_.isUndefined(review.quote))
-                res.json({ Error: "movie quote undefined." });
+                res.json({ Error: "Quote for movie is unavailable." });
 
             else usergrid.POST(review, function (err, response, review) {
                     if (err) {
